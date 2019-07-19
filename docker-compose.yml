@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+   goodreads:
+     image: scrap_us_proxy
+     build:
+       context: .
+       dockerfile: Dockerfile
+     depends_on:
+       - splash
+   splash:
+     image: scrapinghub/splash
